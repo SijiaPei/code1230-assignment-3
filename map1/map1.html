@@ -5,7 +5,6 @@
     <title>MAP 1</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
-    <script src='./data.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
@@ -25,37 +24,38 @@ var map = new mapboxgl.Map({
     bearing: -17.6,
     zoom: 6 // starting zoom
 });
-map.on('load',function(){
     
+map.on('load', function() {
+
     map.addLayer({
-        "id":"data",
+        "id": "data",
         "type": "fill-extrusion",
-        "source":{
-            'type':'geojson',
-            'data':data
+        "source": {
+            'type': 'geojson',
+            'data': './building.geojson'
         },
-           'paint':{
-               'fill-extrusion-color':{
-                   'property':'2',
-                   "stops":[
-                        [0, 'White'],
-                        [10, '#037B86'],
-                        [20, '#FFD000']
-                    ] 
-               },
-               'fill-extrusion-height':{
-                   'property':'1',                   
-                   "stops":[
-                    	[0.2, 0],
-                        [40, 20000],
-                        [80, 40000],
-                    	[200, 100000]
-                    ]
-               },
-               'fill-extrusion-opacity': 0.9
-           }
+        'layout': {
+            'visibility': 'visible'
+            },
+        'paint': {
+                'fill-extrusion-color' : {
+                    'property': 'colour',
+                    'type': 'identity'
+                },
+                'fill-extrusion-height' : {
+                    'type': 'identity',
+                    'property': 'height'
+                },
+                'fill-extrusion-base' : {
+                    'type': 'identity',
+                    'property': 'base_height'
+                },
+                 'fill-extrusion-opacity': 1
+            }
+
     });
 });
+
 </script>
 
 </body>
