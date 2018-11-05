@@ -1,312 +1,201 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>MyMap</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-			    <script type="text/javascript">
-					jQuery(document).ready(function($) {
-						$(".scroll").click(function(event){		
-							event.preventDefault();
-							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-						});
-					});
-				</script>
-<!---- start-smoth-scrolling---->
- <!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-</script>
-<!----webfonts---->
-<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
-<!----//webfonts---->
-	<!----- start-Share-instantly-slider---->
-					 <!-- Prettify -->
-						<link href="css/owl.carousel.css" rel="stylesheet">
-					    <script src="js/owl.carousel.js"></script>
-					    <script>
-						    $(document).ready(function() {
-						      $("#owl-demo , #owl-demo1").owlCarousel({
-						        items : 1,
-						        lazyLoad : true,
-						        autoPlay : true,
-						      });
-						    });
-					    </script>
-					    <script>
-						    $(document).ready(function() {
-						      $("#owl-demo3").owlCarousel({
-						        items : 4,
-						        lazyLoad : true,
-						        autoPlay : true,
-						        navigation: false,
-						        pagination: false,
-						      });
-						    });
-					    </script>
-					<!----- //End-Share-instantly-slider---->
-			 
-					
-				<!----start-top-nav-script---->
-		<script>
-			$(function() {
-				var pull 		= $('#pull');
-					menu 		= $('nav ul');
-					menuHeight	= menu.height();
-				$(pull).on('click', function(e) {
-					e.preventDefault();
-					menu.slideToggle();
-				});
-				$(window).resize(function(){
-	        		var w = $(window).width();
-	        		if(w > 320 && menu.is(':hidden')) {
-	        			menu.removeAttr('style');
-	        		}
-	    		});
-			});
-		</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>MyMap</title>
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                  <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css">                <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>                       <!-- http://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/tooplate-style.css">                               
 
-		<!----//End-top-nav-script---->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-		    <script type="text/javascript">
-			    $(document).ready(function () {
-			        $('#horizontalTab').easyResponsiveTabs({
-			            type: 'default', //Types: default, vertical, accordion           
-			            width: 'auto', //auto or any width like 600px
-			            fit: true   // 100% fit in a container
-			        });
-			    });
-			   </script>
-
-
-		<script type="text/javascript">
-
-			function showDivSydney(){
-				$("#sydney").css("display","block");
-				$("#tab_sydney").css("background","#CFCFCF");
-				$("#tab_tokyo").css("background","none");
-				$("#tokyo").css("display","none");
-				showDivSydney_Impact();	
-			}
-
-			function showDivSydney_Impact(){
-				$("#sydney_impact").css("display","block");
-				$("#sydney_back").css("display","none");
-				$("#tab_sydney_impact").css("background","#CFCFCF");
-				$("#tab_sydney_back").css("background","none");
-
-			}
-
-			function showDivSydney_Back(){
-				$("#sydney_impact").css("display","none");
-				$("#sydney_back").css("display","block");
-				$("#tab_sydney_back").css("background","#CFCFCF");
-				$("#tab_sydney_impact").css("background","none");
-
-			}
-
-			function showDivTokyo(){
-				$("#sydney").css("display","none");
-				$("#tokyo").css("display","block");
-				$("#tab_sydney").css("background","none");
-				$("#tab_tokyo").css("background","#CFCFCF");
-				showDivTokyo_Impact();
-			}
-
-			function showDivTokyo_Impact(){
-				$("#tokyo_impact").css("display","block");
-				$("#tab_tokyo_impact").css("background","#CFCFCF");  
-				$("#tab_tokyo_back").css("background","none");
-				$("#tokyo_back").css("display","none");
-			}
-
-			function showDivTokyo_Back(){
-				$("#tokyo_back").css("display","block");
-				$("#tab_tokyo_back").css("background","#CFCFCF");
-				$("#tab_tokyo_impact").css("background","none");
-				$("#tokyo_impact").css("display","none");
-			}
-			
-			function playvideo1(){
-              var video1 = document.getElementById("video1");
-              video1.play();
-			}
-		</script>			   
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");</script>
+    
 </head>
+
 <body>
-	<div style="position:relative；margin：0px">
-		<div class="header" style="position:fixed;margin-top: 0px">
-			<div class="container">
-				<div class="logo">
-					<h3 class="m_2"><b>MyMap</b></h3>
-				</div>
-				<nav class="top-nav">
-					<ul class="top-nav">
-						<li class="page-scroll"><a href="#introduction" class="scroll">Introduction <span> </span></a></li>
-						<li class="page-scroll"><a href="#representativeregions" class="scroll">Representative regions<span> </span></a></li>
-						<li class="page-scroll"><a href="#concreteexample" class="scroll">Concrete example<span> </span></a></li>
-						<li class="page-scroll"><a href="#solution" class="scroll">Solution<span> </span></a></li>
-						<li class="page-scroll"><a href="#reference" class="scroll">Reference<span> </span></a></li>						
-					</ul>
-					<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
-				</nav>			
-			</div>
-		</div>
+    <div id="tm-bg"></div>
+    <div id="tm-wrap">
+        <div class="tm-main-content">
+            <div class="container tm-site-header-container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
+                        <div class="tm-site-header">
+                            <h1 class="mb-4">CODE1230 ASSIGNMENT 3</h1>
+                            <img src="img/underline.png" class="img-fluid mb-4">
+                            <p style="font-size:16px">The latest census released Monday by the Australian Bureau of Statistics shows that there are only 86.5 men per 100 women. Data show that in all ages, the number of women exceeds 19064 to 18343 years of age. [Western Australia (2018)] </p>        
+                        </div>                        
+                    </div>
+                   
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="content">
+                            <div class="grid">
+                                <div class="grid__item" id="home-link">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-home fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">Representative regions</span>
+                                            <div class="product__bg"></div>        
+                                        </div>                                    
+                                        <div class="product__description">
+                                            <div class="row mb-3">
+                                            </div>                                        
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <img src="img/5.png" class="img-fluid mb-3">
+                                                    <p style="font-size:18px"> In some rural areas, the number of women is significantly higher than that of men. With the passage of time, the number of men and women is increasing. If we do not attach importance to this problem, there will be a serious imbalance between the number of men and women in the future. This is not conducive to human reproduction and cultural heritage.</p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                        <p>Among them, the representative map is Bulbudgeree，Abercrombie， Barool etc. You can see clearly from the map that the number of women in these areas is obviously more than that of men.</p>                                                                                    
+                                                        <br>
+                                                        <video width=300px style="border:10px solid #CFCFCF"  autoPlay muted onplay  loop="loop" id="video1" src="video/1230.mp4" type="video/mp4" />
+                                                    </video>
+                                                    <img src= "img/13.png" width="300px" class="img-fluid mb-3">
+                                                </div>                                        
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
 
-		<div class="main" id="home" style="padding-top: 35px"></div>
+                                <div class="grid__item" id="team-link">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-users fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">Concrete example</span>
+                                            <div class="product__bg"></div>            
+                                        </div>                                     
+                                        <div class="product__description">
+                                            <div class="p-sm-4 p-2">
+                                                <div class="row tm-reverse-sm">
+                                                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                                        <p class="mb-4">"Oh, you can't argue about these statistics; you can't argue about 50 percent of women sitting at the table because most of them want to stay at home and have children," an elderly gentleman said at a government meeting when the number of women in the government attended the discussion. "[ Influence, A. (2018)] As a result of poor education, many men believe that women want to stay at home and have children, leading to more women than men in rural areas.</p>
+                                                        <p class="mb-4">A national research project recorded in the 1998 Report "Missed Opportunities: Making Use of Women's Potential in Australian Agriculture"* found that women in agricultural enterprises are both "glue" (by assuming primary responsibility for household maintenance and farming practices) that gathers household farms together and that agricultural women are also part of their rural communities The necessary voluntary contributions were provided, estimated at least $500 million per year. Farm women contribute about $8 billion annually to the rural economy through free housework. As pointed out in the report, despite the tremendous contributions made by women, they still account for less than 20 per cent of agricultural decision makers. [ Ltd, O. (2018)] Women are regarded as the main labor force in the countryside, and they do not have the dominant power. Because their ability to work is outstanding, the countryside will leave women as labor force.</p>
+                                                        <div style="float:right" >
+                                                                <a href="http://www.afrwomenofinfluence.com.au/a-voice-for-regional-areas/">
+                                                                 <button>See More >></button></a>
+                                                             </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="grid__item">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-handshake fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">Solution</span>
+                                            <div class="product__bg"></div>             
+                                        </div>                                                                 
+                                        <div class="product__description">
+                                            <div class="p-sm-4 p-2">
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <p>The number of rural women is obviously more than that of men, which can be solved from two aspects. On the one hand is to retain the local men, on the other hand is to attract more men from other places here. In order to improve the ideological level of the local people, schools and gymnasiums have been set up in these areas to attract foreigners. As we all know, sports competition is the hobby of many men. As long as there are sports venues, there will be many men. So if the stadium is set up here, more people will come to the stadium, which will increase the number of local men. The survey shows that the local people's thinking is a little backward, so the idea of "women want to stay at home and have children" will be widespread in the minds of the local people. So we can build more schools to educate the local people in ideology, so as to eliminate this idea, let women go to other places or let men stay.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="p-sm-4 p-2 tm-img-container">
+                                                            <div class="tm-img-slider" id="tmImgSlider">
+                                                              <img src="img/9.png" alt="Image" class="tm-slider-img">
+                                                              <img src="img/2.jpg" alt="Image" class="tm-slider-img">
+                                                              <img src="img/11.png" alt="Image" class="tm-slider-img">
+                                                              <img src="img/15.png" alt="Image" class="tm-slider-img">
+                                                              <img src="img/16.png" alt="Image" class="tm-slider-img">
+                                                              <img src="img/17.png" alt="Image" class="tm-slider-img">
+                                                            </div>
+                                                            <div class="row mb-3">
+                                                                <div class="col-12">
+                                                                    <br>
+                                                                    <p>And besides gymnasiums and schools, shopping malls and residential areas can be built to improve the living convenience of this area. People can live here, so that the daily journey to school will be much shorter. In their spare time, people can also go shopping in the mall and relax themselves. In this way, people can choose to live in this place more, so as to solve the problem of "the number of women is much larger than the number of men".</p>
+                                                                </div>
+                                                            </div>
+                                                            <div><iframe class="mb-4" id="map" width="100%" height="400px" src="map/map.html" frameborder="0" allowfullscreen></iframe></div>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>       
+                                    </div>
+                                </div>
 
+                                <div class="grid__item">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-comments fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">References</span>
+                                            <div class="product__bg"></div>             
+                                        </div>                                                              
+                                        <div class="product__description">
+                                            <div class="pt-sm-4 pb-sm-4 pl-sm-5 pr-sm-5 pt-2 pb-2 pl-3 pr-3">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <form action="index.html" method="post" class="contact-form">
+                                                            <div class="row">
+                                                                <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                                        <p>1.The West Australian. (2018). Census shows more women. [online] Available at: https://thewest.com.au/news/wa/census-shows-more-women-ng-b88583134z [Accessed 18 Oct. 2018].</p>
+                                                                        <br>
+                                                                        <p>2.Influence, A. (2018). Women of Influence 2018: a voice for regional areas - AFR Women of Influence. [online] AFR Women of Influence. Available at: http://www.afrwomenofinfluence.com.au/a-voice-for-regional-areas/ [Accessed 18 Oct. 2018].</p>
+                                                                        <br>
+                                                                        <p>3.Ltd, O. (2018). Our Community. [online] Ourcommunity.com.au. Available at: https://www.ourcommunity.com.au/marketing/marketing_article.jsp?articleId=1435 [Accessed 18 Oct. 2018].</p>
+                                                                        <br>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                       
+                    </div>
+                </div>                
+            </div>
+        </div> <!-- .tm-main-content -->  
+    </div>
+    <!-- load JS -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
+    <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
+    <script src="js/anime.min.js"></script>                     <!-- http://animejs.com/ -->
+    <script src="js/main.js"></script>  
+    <script>      
 
+        function setupFooter() {
+            var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
 
+            var main = $('.tm-main-content');
 
+            if($(window).height() < pageHeight) {
+                main.addClass('tm-footer-relative');
+            }
+            else {
+                main.removeClass('tm-footer-relative');   
+            }
+        }
 
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function(){
 
-	
-		<!-- part1 : Introduction   -->		
-		<div id="introduction"  class="row feature">
-			<br>
-				<h3>Introduction</h3>
-				<div class="left_div">
-					<br>
-					<br>
-					<p>The numbers show there were only 86.5 men to every 100 women in the latest census results released by the Australian Bureau of Statistics on Monday. The figures reveal while women outnumber men 19,064 to 18,343 across all ages. [ The West Australian. (2018)]
-					In some rural areas, the number of women is significantly higher than that of men. As time goes on, the number of men and women is getting worse. If we do not attach importance to this problem, the number of men and women will be seriously unbalanced in the future.</p>			
-				    <br>
-				</div>
-				
-				<div class="right_div" >
-					<br>
-					<img  width="80%" src="images/5.png"  />		 
-				</div>	
-		</div>
+            setupFooter();
 
+            $(window).resize(function(){
+                setupFooter();
+            });
 
+            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+        });
 
-        
-	
-		
-		<!-- part2 : Representative regions -->
-		<div  id="representativeregions">
-					<div class="border" ></div>
-					<div class="row feature">
-									<h3>Representative regions</h3>
-									<p>Among them,the representative map is Bulbudgeree,Abercrombie,Barool etc. </p>
-					</div>		
+    </script>             
 
-					<div class="row feature">
-						<video width=100p% style="border:10px solid #CFCFCF" autoPlay muted onplay  loop="loop" id="video1" src="video/1230.mp4" type="video/mp4" />
-						</video>
-					</div>
-		</div>
-
-
-
-
-
-
-		<!-- part3 : Concrete example -->
-		<div  id="concreteexample">
-			<div class="border" ></div>
-			<div class="row feature">
-							<h3>Concrete example</h3>
-			</div>		
-
-			<div class="row feature">										
-								<div class="left_div">								
-									<br>
-									<p>1."Oh, you can't argue about these statistics; you can't argue about 50 percent of women sitting at the table because most of them want to stay at home and have children," an elderly gentleman said at a government meeting when the number of women in the government attended the discussion. "[ Influence, A. (2018)] As a result of poor education, many men believe that women want to stay at home and have children, leading to more women than men in rural areas.</p>
-								</div>
-								
-								<div class="right_div" >
-									<br>
-									<p>2.A national research project recorded in the 1998 Report "Missed Opportunities: Making Use of Women's Potential in Australian Agriculture"* found that women in agricultural enterprises are both "glue" (by assuming primary responsibility for household maintenance and farming practices) that gathers household farms together and that agricultural women are also part of their rural communities The necessary voluntary contributions were provided, estimated at least $500 million per year. Farm women contribute about $8 billion annually to the rural economy through free housework. As pointed out in the report, despite the tremendous contributions made by women, they still account for less than 20 per cent of agricultural decision makers. [ Ltd, O. (2018)] Women are regarded as the main labor force in the countryside, and they do not have the dominant power. Because their ability to work is outstanding, the countryside will leave women as labor force.</p>
-								</div>
-			</div>
-
-
-
-
-
-
-		<!-- part4: Solution -->
-		<div class="row feature"></div>
-		<div class="border" ></div>	
-		<div id="solution">
-					
-						
-								<div class="row feature">
-								
-												<h3>Solution</h3>
-												<p>The number of women in rural areas is significantly more than that of men, which can be solved in two ways. Schools have been set up in these areas to raise the ideological standards of the local people and gymnasiums have been set up to attract men from other places.</p>																																																																																																																												
-											
-								</div>
-								
-								
-								<div class="row feature">
-									      <div>
-												<div class="left_div">
-														<img  width="100%" src="images/9.png"  />							
-												</div>
-												<div class="right_div">	
-														<img  width="100%" src="images/2.jpg"  />	
-												</div>
-										  </div>	
-								 </div>
-
-
-								 <div class="row feature">
-										<div>
-											  <div class="left_div">
-													<p>Take Bulbudgeree as an example to compare before and after transformation.</p>
-													<br>
-													  <img  width="100%" src="images/10.png"  />							
-											  </div>
-											  <div class="right_div">	
-													  <img  width="100%" height="80%" src="images/11.png"  />
-											  </div>
-											  
-
-										</div>	
-							   </div>
-							   <div class="row feature">
-								   <div>
-									   <iframe id="map" width="100%" height="400px" src="map/map.html" frameborder="0" allowfullscreen></iframe>
-								  </div>
-							   </div>
-		</div>
-
-
-
-		<!-- part5: reference -->
-		<div class="border" ></div>	
-		<div id="reference">	
-
-			<div class="row feature">
-					<h3>Reference</h3>
-					<p>1.The West Australian. (2018). Census shows more women. [online] Available at: https://thewest.com.au/news/wa/census-shows-more-women-ng-b88583134z [Accessed 18 Oct. 2018].</p>
-					<br>
-					<p>2.Influence, A. (2018). Women of Influence 2018: a voice for regional areas - AFR Women of Influence. [online] AFR Women of Influence. Available at: http://www.afrwomenofinfluence.com.au/a-voice-for-regional-areas/ [Accessed 18 Oct. 2018].</p>
-					<br>
-					<p>3.Ltd, O. (2018). Our Community. [online] Ourcommunity.com.au. Available at: https://www.ourcommunity.com.au/marketing/marketing_article.jsp?articleId=1435 [Accessed 18 Oct. 2018].</p>
-					<br>
-					<br>
-					<br>
-					
-				</div>
-			</div>
-			
-			
-		</div>
-	
-	</div>	
-		
-	
 </body>
 </html>
